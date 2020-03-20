@@ -92,9 +92,9 @@ app.renderer.backgroundColor = 0x9DD9D2;
 
 loader
     .add([
-        '../assets/tilesheet/tilesheet.json',
-        '../assets/tilesheet/tilesheet.png',
-        '../assets/background/space.png'
+        '/assets/tilesheet/tilesheet.json',
+        '/assets/tilesheet/tilesheet.png',
+        '/assets/background/space.png'
     ])
     .on("progress", loadProgressHandler)
     .load(setup);
@@ -112,12 +112,12 @@ function setup() {
     gameScene = new Container();
     app.stage.addChild(gameScene);
 
-    background = new Sprite(res["../assets/background/space.png"].texture);
+    background = new Sprite(res["/assets/background/space.png"].texture);
     background.scale.x = backgroundSize;
     background.scale.y = backgroundSize;
     gameScene.addChild(background);
 
-    tileSheet = res['../assets/tilesheet/tilesheet.json'].spritesheet; 
+    tileSheet = res['/assets/tilesheet/tilesheet.json'].spritesheet; 
 
     let world1 = new Container();
     let blockArray = [];
